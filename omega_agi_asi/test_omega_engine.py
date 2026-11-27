@@ -118,6 +118,12 @@ class TestOmegaAGIASIEngine(unittest.TestCase):
         self.assertEqual(rep["nodes_passed_sandbox"], 5)
         self.assertGreater(rep["swarm_bayesian_consensus_probability"], 0.985)
 
+    def test_open_ended_ast_genetic_synthesizer_and_auto_repair(self):
+        from open_ended_synthesizer import run_side_two_demonstration
+        rep = run_side_two_demonstration()
+        self.assertTrue(rep["all_challenges_solved"])
+        self.assertEqual(len(rep["challenges"]), 3)
+
 
 if __name__ == "__main__":
     unittest.main()

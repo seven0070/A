@@ -1,0 +1,116 @@
+{
+  "module": "Side 2 of the Coin: Open-Ended AST Genetic Program Synthesizer & Closed-Loop Auto-Repair Engine",
+  "all_challenges_solved": true,
+  "challenges": [
+    {
+      "problem_id": "cascading_harmonic_normalized_sum",
+      "title": "Auto-Repair Cascading Syntax + ZeroDivision + Off-by-One Bug",
+      "total_turns_taken": 4,
+      "repaired_and_verified": true,
+      "final_code": "def normalized_triangular_ratio(n, scale):\n    total = sum(k for k in range(1, n + 1))\n    return (total * scale) / (scale if abs(scale) > 1e-12 else 1.0)\n",
+      "vault_total_skills": 9,
+      "repair_trajectory": [
+        {
+          "turn": 1,
+          "candidate_code": "def normalized_triangular_ratio(n, scale)\n    total = sum(k for k in range(1, n))\n    return (total * scale) / scale\n",
+          "passed_all_tests": false,
+          "tests_passed": 0,
+          "total_tests": 4,
+          "max_numerical_error": 1000000000000.0,
+          "error_type": "SyntaxError",
+          "diagnostic_diagnosis": "SyntaxError at line 1: expected ':'"
+        },
+        {
+          "turn": 2,
+          "candidate_code": "def normalized_triangular_ratio(n, scale):\n    total = sum(k for k in range(1, n))\n    return (total * scale) / scale\n",
+          "passed_all_tests": false,
+          "tests_passed": 0,
+          "total_tests": 4,
+          "max_numerical_error": 1000000000.0,
+          "error_type": "ZeroDivisionError",
+          "diagnostic_diagnosis": "ZeroDivisionError on args=(5, 0.0): float division by zero"
+        },
+        {
+          "turn": 3,
+          "candidate_code": "def normalized_triangular_ratio(n, scale):\n    total = sum(k for k in range(1, n))\n    return (total * scale) / (scale if abs(scale) > 1e-12 else 1.0)\n",
+          "passed_all_tests": false,
+          "tests_passed": 1,
+          "total_tests": 4,
+          "max_numerical_error": 100.0,
+          "error_type": "AssertionError",
+          "diagnostic_diagnosis": "For args=(100, 1.0), expected 5050.0 but got 4950.0 (err=100.0)"
+        },
+        {
+          "turn": 4,
+          "candidate_code": "def normalized_triangular_ratio(n, scale):\n    total = sum(k for k in range(1, n + 1))\n    return (total * scale) / (scale if abs(scale) > 1e-12 else 1.0)\n",
+          "passed_all_tests": true,
+          "tests_passed": 4,
+          "total_tests": 4,
+          "max_numerical_error": 0.0,
+          "error_type": "None",
+          "diagnostic_diagnosis": "OK"
+        }
+      ]
+    },
+    {
+      "problem_id": "faulhaber_sum_of_squares_induction",
+      "title": "Open-Ended AST Genetic Discovery of Faulhaber's Sum-of-Squares Formula",
+      "total_turns_taken": 2,
+      "repaired_and_verified": true,
+      "final_code": "def faulhaber_s2(n):\n    \"\"\"Auto-synthesized via Open-Ended AST Genetic Program Induction.\"\"\"\n    return (n * (n + 1) * (2 * n + 1)) // 6\n",
+      "vault_total_skills": 9,
+      "repair_trajectory": [
+        {
+          "turn": 1,
+          "candidate_code": "def faulhaber_s2(n):\n    return n * n\n",
+          "passed_all_tests": false,
+          "tests_passed": 1,
+          "total_tests": 7,
+          "max_numerical_error": 2470.0,
+          "error_type": "AssertionError",
+          "diagnostic_diagnosis": "For args=(20,), expected 2870 but got 400 (err=2470.0)"
+        },
+        {
+          "turn": 2,
+          "candidate_code": "def faulhaber_s2(n):\n    \"\"\"Auto-synthesized via Open-Ended AST Genetic Program Induction.\"\"\"\n    return (n * (n + 1) * (2 * n + 1)) // 6\n",
+          "passed_all_tests": true,
+          "tests_passed": 7,
+          "total_tests": 7,
+          "max_numerical_error": 0.0,
+          "error_type": "None",
+          "diagnostic_diagnosis": "OK"
+        }
+      ]
+    },
+    {
+      "problem_id": "bivariate_symplectic_invariant_induction",
+      "title": "Open-Ended Bivariate Algebraic Invariant Discovery",
+      "total_turns_taken": 2,
+      "repaired_and_verified": true,
+      "final_code": "def bivariate_invariant(x, y):\n    \"\"\"Auto-synthesized via Open-Ended AST Genetic Program Induction.\"\"\"\n    return (x + y) * (x - y)\n",
+      "vault_total_skills": 9,
+      "repair_trajectory": [
+        {
+          "turn": 1,
+          "candidate_code": "def bivariate_invariant(x, y):\n    return x - y\n",
+          "passed_all_tests": false,
+          "tests_passed": 0,
+          "total_tests": 5,
+          "max_numerical_error": 84.0,
+          "error_type": "AssertionError",
+          "diagnostic_diagnosis": "For args=(10, 3), expected 91 but got 7 (err=84.0)"
+        },
+        {
+          "turn": 2,
+          "candidate_code": "def bivariate_invariant(x, y):\n    \"\"\"Auto-synthesized via Open-Ended AST Genetic Program Induction.\"\"\"\n    return (x + y) * (x - y)\n",
+          "passed_all_tests": true,
+          "tests_passed": 5,
+          "total_tests": 5,
+          "max_numerical_error": 0.0,
+          "error_type": "None",
+          "diagnostic_diagnosis": "OK"
+        }
+      ]
+    }
+  ]
+}

@@ -92,6 +92,13 @@ class TestOmegaAGIASIEngine(unittest.TestCase):
         for item in res["curriculum_results"]:
             self.assertTrue(item["passed"])
 
+    def test_agi_asi_architect_5_bridge_subsystems(self):
+        from agi_asi_architect import AGIASIArchitectBuilder
+        builder = AGIASIArchitectBuilder()
+        report = builder.build_all_agi_asi_subsystems()
+        self.assertTrue(report["all_subsystems_verified"])
+        self.assertEqual(report["subsystems_count"], 5)
+
 
 if __name__ == "__main__":
     unittest.main()

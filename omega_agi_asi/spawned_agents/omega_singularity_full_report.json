@@ -1,5 +1,5 @@
 {
-  "timestamp": 1795775093.9495997,
+  "timestamp": 1795776850.9872327,
   "pillar_1_real_subspace_and_expert_surgery": {
     "subspace_profile": {
       "trial_id": 35,
@@ -121,9 +121,9 @@
         "baseline_error": 0.0004174736,
         "mutated_error": 1.01748e-05,
         "error_improvement_factor": 41.03,
-        "baseline_latency_ms": 1.2569,
-        "mutated_latency_ms": 1.4488,
-        "speedup_factor": 0.868,
+        "baseline_latency_ms": 1.4026,
+        "mutated_latency_ms": 1.4342,
+        "speedup_factor": 0.978,
         "ast_nodes_baseline": 126,
         "ast_nodes_mutated": 366,
         "accepted_and_committed": true
@@ -136,9 +136,9 @@
         "baseline_error": 3.448676899608927e-10,
         "mutated_error": 2.220446049250313e-16,
         "error_improvement_factor": 1070869.64,
-        "baseline_latency_ms": 179.0106,
-        "mutated_latency_ms": 70.3656,
-        "speedup_factor": 2.544,
+        "baseline_latency_ms": 177.6025,
+        "mutated_latency_ms": 74.3545,
+        "speedup_factor": 2.389,
         "ast_nodes_baseline": 147,
         "ast_nodes_mutated": 285,
         "accepted_and_committed": true
@@ -151,9 +151,9 @@
         "baseline_error": 0.0,
         "mutated_error": 2.7755575615628914e-17,
         "error_improvement_factor": 1.0,
-        "baseline_latency_ms": 64.3257,
-        "mutated_latency_ms": 35.991,
-        "speedup_factor": 1.787,
+        "baseline_latency_ms": 63.8295,
+        "mutated_latency_ms": 34.4953,
+        "speedup_factor": 1.85,
         "ast_nodes_baseline": 169,
         "ast_nodes_mutated": 164,
         "accepted_and_committed": true
@@ -162,7 +162,7 @@
   },
   "pillar_3_autonomous_curriculum_and_memory_vault": {
     "vault_db_path": "/home/antigravity/seven0070/A/omega_agi_asi/spawned_agents/omega_memory_vault.sqlite",
-    "total_verified_skills_in_vault": 4,
+    "total_verified_skills_in_vault": 6,
     "curriculum_tiers_completed": 4,
     "curriculum_results": [
       {

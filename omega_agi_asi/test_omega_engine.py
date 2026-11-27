@@ -110,6 +110,14 @@ class TestOmegaAGIASIEngine(unittest.TestCase):
             [4, 3, 8, 10, 20],
         )
 
+    def test_thermodynamic_asi_swarm_and_master_pipeline(self):
+        from swarm_agent import ThermodynamicSwarmOrchestrator
+        swarm = ThermodynamicSwarmOrchestrator()
+        rep = swarm.execute_swarm_mission("Synthesize multi-agent consensus kernel")
+        self.assertEqual(rep["swarm_size"], 5)
+        self.assertEqual(rep["nodes_passed_sandbox"], 5)
+        self.assertGreater(rep["swarm_bayesian_consensus_probability"], 0.985)
+
 
 if __name__ == "__main__":
     unittest.main()

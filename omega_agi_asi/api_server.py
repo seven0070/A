@@ -125,6 +125,15 @@ class OmegaASIHandler(BaseHTTPRequestHandler):
             self._send_json(200, asdict(bp))
             return
 
+        if self.path == "/v1/swarm/execute":
+            from swarm_agent import ThermodynamicSwarmOrchestrator
+            swarm = ThermodynamicSwarmOrchestrator()
+            rep = swarm.execute_swarm_mission(
+                mission=body.get("mission", "Unify symplectic physics, Birkhoff spectral stability, causal do-calculus, and KDA fast-weight plasticity.")
+            )
+            self._send_json(200, rep)
+            return
+
         self._send_json(404, {"error": f"Unknown POST endpoint {self.path}"})
 
 

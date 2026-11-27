@@ -1,0 +1,211 @@
+{
+  "engine": "OMEGA-GLM AGI/ASI Creator Engine",
+  "backbone": {
+    "model_name": "GLM-5.3-Flash-Uncensored",
+    "arch_type": "glm5_next",
+    "num_hidden_layers": 45,
+    "kda_linear_attention_layers": 34,
+    "mla_sparse_attention_layers": 11,
+    "routed_experts_full": 288,
+    "routed_experts_pruned": 92,
+    "active_experts_top_k": 8,
+    "mhc_streams": 4,
+    "context_window": 1048576,
+    "adapters_available": [
+      "abliteration-lora.gguf",
+      "glm-5.3-heretic-lora-v3.gguf"
+    ],
+    "active_backend": "neuro-symbolic-synthesis-kernel (GLM-5.3-Flash config + local mathematical solver)"
+  },
+  "cycles_completed": 3,
+  "final_asi_fitness": 0.9999,
+  "spawned_agents_dir": "/home/antigravity/seven0070/A/omega_agi_asi/spawned_agents",
+  "evolution_history": [
+    {
+      "cycle": 1,
+      "agent_id": "omega_agent_gen01_mhc_birkhoff_spectral_stabilizer_rank_2_refusal_abliterator",
+      "name": "mHC Birkhoff Spectral Stabilizer & Rank-2 Refusal Abliterator",
+      "domain": "Mathematical Weight-Space Surgery & Manifold Routing",
+      "accepted_into_core": true,
+      "prm_score": 0.9854,
+      "cumulative_asi_fitness": 0.9999,
+      "kolmogorov_bits": 7784.0,
+      "sample_routed_experts": {
+        "layer_3": [
+          217,
+          220,
+          31,
+          4,
+          27,
+          226,
+          250,
+          226
+        ],
+        "layer_15": [
+          235,
+          224,
+          14,
+          203,
+          160,
+          15,
+          274,
+          33
+        ],
+        "layer_22": [
+          79,
+          48,
+          153,
+          225,
+          250,
+          29,
+          55,
+          139
+        ],
+        "layer_35": [
+          244,
+          246,
+          39,
+          7,
+          31,
+          250,
+          263,
+          250
+        ],
+        "layer_44": [
+          220,
+          8,
+          87,
+          44,
+          39,
+          124,
+          17,
+          253
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "agent_id": "omega_agent_gen02_hybrid_kda_linear_deepseek_sparse_mla_context_compressor",
+      "name": "Hybrid KDA Linear + DeepSeek-Sparse MLA Context Compressor",
+      "domain": "1M-Token Associative Memory & Speculative MTP Decoding",
+      "accepted_into_core": true,
+      "prm_score": 0.9873,
+      "cumulative_asi_fitness": 0.9999,
+      "kolmogorov_bits": 7600.0,
+      "sample_routed_experts": {
+        "layer_3": [
+          179,
+          202,
+          132,
+          27,
+          199,
+          232,
+          19,
+          88
+        ],
+        "layer_15": [
+          250,
+          15,
+          265,
+          122,
+          32,
+          131,
+          122,
+          97
+        ],
+        "layer_22": [
+          148,
+          109,
+          114,
+          84,
+          34,
+          253,
+          279,
+          253
+        ],
+        "layer_35": [
+          187,
+          215,
+          174,
+          31,
+          198,
+          254,
+          26,
+          134
+        ],
+        "layer_44": [
+          35,
+          159,
+          64,
+          64,
+          126,
+          75,
+          230,
+          135
+        ]
+      }
+    },
+    {
+      "cycle": 3,
+      "agent_id": "omega_agent_gen03_autonomous_scientific_discovery_theorem_synthesis_engine",
+      "name": "Autonomous Scientific Discovery & Theorem Synthesis Engine",
+      "domain": "Theoretical Physics, Symplectic Geometry & Algorithmic Information Theory",
+      "accepted_into_core": true,
+      "prm_score": 0.9866,
+      "cumulative_asi_fitness": 0.9999,
+      "kolmogorov_bits": 7720.0,
+      "sample_routed_experts": {
+        "layer_3": [
+          4,
+          280,
+          132,
+          202,
+          66,
+          179,
+          206,
+          241
+        ],
+        "layer_15": [
+          168,
+          164,
+          259,
+          281,
+          28,
+          56,
+          4,
+          63
+        ],
+        "layer_22": [
+          120,
+          127,
+          125,
+          156,
+          285,
+          274,
+          156,
+          101
+        ],
+        "layer_35": [
+          7,
+          271,
+          174,
+          215,
+          96,
+          187,
+          220,
+          256
+        ],
+        "layer_44": [
+          131,
+          41,
+          17,
+          274,
+          262,
+          68,
+          104,
+          133
+        ]
+      }
+    }
+  ]
+}

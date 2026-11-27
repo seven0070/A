@@ -62,6 +62,36 @@ class TestOmegaAGIASIEngine(unittest.TestCase):
         for item in report["evolution_history"]:
             self.assertTrue(item["accepted_into_core"])
 
+    def test_real_npz_subspace_and_keep_json_surgery(self):
+        from subspace_weight_surgery import RealSubspaceWeightSurgeryEngine
+        surgery = RealSubspaceWeightSurgeryEngine()
+        prof = surgery.inspect_subspace()
+        self.assertEqual(prof.hidden_dim, 4096)
+        self.assertEqual(prof.num_layers, 45)
+        self.assertAlmostEqual(prof.q0_norm, 1.0, places=4)
+        self.assertAlmostEqual(prof.q1_norm, 1.0, places=4)
+        self.assertAlmostEqual(prof.q0_q1_dot_orthogonality, 0.0, places=4)
+        stats = surgery.compute_expert_topology_statistics()
+        self.assertEqual(stats["moe_layers_analyzed"], 42)
+        self.assertEqual(stats["experts_kept_per_layer"], 92)
+
+    def test_darwin_godel_ast_self_rewriter(self):
+        from darwin_godel_rewriter import DarwinGodelSelfRewriter
+        rewriter = DarwinGodelSelfRewriter()
+        res = rewriter.run_self_rewriting_evolution()
+        self.assertEqual(res["mutations_evaluated"], 3)
+        self.assertEqual(res["mutations_committed"], 3)
+        self.assertGreater(res["results"][0]["error_improvement_factor"], 35.0)
+
+    def test_autonomous_curriculum_and_sqlite_memory_vault(self):
+        from autonomous_curriculum_memory import AutonomousCurriculumEngine
+        cur = AutonomousCurriculumEngine()
+        res = cur.run_self_play_curriculum()
+        self.assertEqual(res["curriculum_tiers_completed"], 4)
+        self.assertGreaterEqual(res["total_verified_skills_in_vault"], 4)
+        for item in res["curriculum_results"]:
+            self.assertTrue(item["passed"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,433 @@
+{
+  "timestamp": 1795775093.9495997,
+  "pillar_1_real_subspace_and_expert_surgery": {
+    "subspace_profile": {
+      "trial_id": 35,
+      "rank_k": 2,
+      "hidden_dim": 4096,
+      "num_layers": 45,
+      "families": [
+        "chat",
+        "think"
+      ],
+      "components": [
+        "attn",
+        "mlp"
+      ],
+      "hyperparams": {
+        "k": 2,
+        "attn_max": 1.6184505238929556,
+        "attn_peak": 27.116135452995966,
+        "attn_width": 36.8570026253082,
+        "attn_min": 0.6490963551185411,
+        "mlp_max": 1.071630274064915,
+        "mlp_peak": 30.154295040527636,
+        "mlp_width": 41.61242460579863,
+        "mlp_min": 0.9526757742421144
+      },
+      "q0_norm": 1.0,
+      "q1_norm": 1.0,
+      "q0_q1_dot_orthogonality": -0.0,
+      "peak_attn_layer": 27,
+      "peak_attn_scale": 1.616661,
+      "peak_mlp_layer": 30,
+      "peak_mlp_scale": 1.071442
+    },
+    "optimized_kl_estimate": 0.03578,
+    "peak_writer_layers": {
+      "attn_o_proj_peak": 27.12,
+      "mlp_shared_down_peak": 30.15
+    },
+    "expert_topology_stats": {
+      "moe_layers_analyzed": 42,
+      "experts_kept_per_layer": 92,
+      "experts_full_per_layer": 288,
+      "pruning_compression_ratio": 0.3194,
+      "unique_expert_indices_used": 288,
+      "top_anchor_experts": [
+        {
+          "expert_id": 45,
+          "layers_present": 22,
+          "persistence_ratio": 0.5238
+        },
+        {
+          "expert_id": 224,
+          "layers_present": 22,
+          "persistence_ratio": 0.5238
+        },
+        {
+          "expert_id": 131,
+          "layers_present": 21,
+          "persistence_ratio": 0.5
+        },
+        {
+          "expert_id": 75,
+          "layers_present": 20,
+          "persistence_ratio": 0.4762
+        },
+        {
+          "expert_id": 171,
+          "layers_present": 20,
+          "persistence_ratio": 0.4762
+        },
+        {
+          "expert_id": 30,
+          "layers_present": 19,
+          "persistence_ratio": 0.4524
+        },
+        {
+          "expert_id": 172,
+          "layers_present": 19,
+          "persistence_ratio": 0.4524
+        },
+        {
+          "expert_id": 187,
+          "layers_present": 19,
+          "persistence_ratio": 0.4524
+        },
+        {
+          "expert_id": 202,
+          "layers_present": 19,
+          "persistence_ratio": 0.4524
+        },
+        {
+          "expert_id": 277,
+          "layers_present": 19,
+          "persistence_ratio": 0.4524
+        },
+        {
+          "expert_id": 0,
+          "layers_present": 18,
+          "persistence_ratio": 0.4286
+        },
+        {
+          "expert_id": 11,
+          "layers_present": 18,
+          "persistence_ratio": 0.4286
+        }
+      ]
+    }
+  },
+  "pillar_2_darwin_godel_ast_self_rewriting": {
+    "evolved_module_path": "/home/antigravity/seven0070/A/omega_agi_asi/evolved_kernels.py",
+    "mutations_evaluated": 3,
+    "mutations_committed": 3,
+    "results": [
+      {
+        "generation": 1,
+        "kernel_name": "hamiltonian_phase_space_integrator",
+        "baseline_algorithm": "St\u00f6rmer-Verlet 2nd-Order Leapfrog O(dt^2)",
+        "mutated_algorithm": "Forest-Ruth / Yoshida 4th-Order Symplectic O(dt^4)",
+        "baseline_error": 0.0004174736,
+        "mutated_error": 1.01748e-05,
+        "error_improvement_factor": 41.03,
+        "baseline_latency_ms": 1.2569,
+        "mutated_latency_ms": 1.4488,
+        "speedup_factor": 0.868,
+        "ast_nodes_baseline": 126,
+        "ast_nodes_mutated": 366,
+        "accepted_and_committed": true
+      },
+      {
+        "generation": 2,
+        "kernel_name": "mhc_birkhoff_polytope_projector",
+        "baseline_algorithm": "Fixed-40-Iteration Generic Sinkhorn-Knopp",
+        "mutated_algorithm": "Unrolled 4-Wide Adaptive Dual-Scaling Sinkhorn-Knopp",
+        "baseline_error": 3.448676899608927e-10,
+        "mutated_error": 2.220446049250313e-16,
+        "error_improvement_factor": 1070869.64,
+        "baseline_latency_ms": 179.0106,
+        "mutated_latency_ms": 70.3656,
+        "speedup_factor": 2.544,
+        "ast_nodes_baseline": 147,
+        "ast_nodes_mutated": 285,
+        "accepted_and_committed": true
+      },
+      {
+        "generation": 3,
+        "kernel_name": "kda_linear_attention_delta_recurrence",
+        "baseline_algorithm": "Two-Pass Separate State Update & Readout",
+        "mutated_algorithm": "Fused Single-Pass KDA Delta-Rule Update & Readout",
+        "baseline_error": 0.0,
+        "mutated_error": 2.7755575615628914e-17,
+        "error_improvement_factor": 1.0,
+        "baseline_latency_ms": 64.3257,
+        "mutated_latency_ms": 35.991,
+        "speedup_factor": 1.787,
+        "ast_nodes_baseline": 169,
+        "ast_nodes_mutated": 164,
+        "accepted_and_committed": true
+      }
+    ]
+  },
+  "pillar_3_autonomous_curriculum_and_memory_vault": {
+    "vault_db_path": "/home/antigravity/seven0070/A/omega_agi_asi/spawned_agents/omega_memory_vault.sqlite",
+    "total_verified_skills_in_vault": 4,
+    "curriculum_tiers_completed": 4,
+    "curriculum_results": [
+      {
+        "skill_id": "skill_tier1_noether_relativistic_invariant",
+        "tier": 1,
+        "title": "Relativistic Lorentz & Noether Angular Momentum Invariant Solver",
+        "passed": true,
+        "verification_output": "LORENTZ_AND_NOETHER_INVARIANT_OK dS=3.55e-15 dL=2.22e-16",
+        "difficulty_score": 0.78
+      },
+      {
+        "skill_id": "skill_tier2_gram_schmidt_rank_k_abliterator",
+        "tier": 2,
+        "title": "Modified Gram-Schmidt QR & Exact Nullspace Refusal Projector",
+        "passed": true,
+        "verification_output": "NULLSPACE_PROJECTOR_OK idem_err=1.11e-16 dot1=8.33e-17 dot2=1.75e-16",
+        "difficulty_score": 0.86
+      },
+      {
+        "skill_id": "skill_tier3_natural_gradient_fisher_active_inference",
+        "tier": 3,
+        "title": "Amari Fisher Information Natural Gradient & Variational Free-Energy Minimizer",
+        "passed": true,
+        "verification_output": "NATURAL_GRADIENT_FREE_ENERGY_OK G0=-0.2500 G_final=-1.2989 opt_p0=0.8310",
+        "difficulty_score": 0.93
+      },
+      {
+        "skill_id": "skill_tier4_banach_fixed_point_self_verifier",
+        "tier": 4,
+        "title": "Banach Contraction Mapping & G\u00f6del Fixed-Point Theorem Solver",
+        "passed": true,
+        "verification_output": "BANACH_FIXED_POINT_OK x*=1.49450909 y*=0.29954908 residual=0.00e+00",
+        "difficulty_score": 0.98
+      }
+    ],
+    "sample_semantic_retrieval": [
+      {
+        "skill_id": "skill_tier4_banach_fixed_point_self_verifier",
+        "tier": 4,
+        "title": "Banach Contraction Mapping & G\u00f6del Fixed-Point Theorem Solver",
+        "domain": "Functional Analysis & Recursive Meta-Reasoning",
+        "theorem_or_invariant": "For contraction T with Lipschitz constant L < 1 on complete metric space (X, d), d(x_n, x*) <= (L^n / (1 - L)) d(x_1, x_0).",
+        "difficulty_score": 0.98,
+        "cosine_similarity": 0.2111
+      },
+      {
+        "skill_id": "skill_tier3_natural_gradient_fisher_active_inference",
+        "tier": 3,
+        "title": "Amari Fisher Information Natural Gradient & Variational Free-Energy Minimizer",
+        "domain": "Information Geometry & Active Inference Control",
+        "theorem_or_invariant": "Natural gradient F^{-1} grad_theta L is invariant under smooth reparameterization of the statistical manifold.",
+        "difficulty_score": 0.93,
+        "cosine_similarity": 0.1748
+      }
+    ]
+  },
+  "pillar_4_recursive_agent_synthesis": {
+    "engine": "OMEGA-GLM AGI/ASI Creator Engine",
+    "backbone": {
+      "model_name": "GLM-5.3-Flash-Uncensored",
+      "arch_type": "glm5_next",
+      "num_hidden_layers": 45,
+      "kda_linear_attention_layers": 34,
+      "mla_sparse_attention_layers": 11,
+      "routed_experts_full": 288,
+      "routed_experts_pruned": 92,
+      "active_experts_top_k": 8,
+      "mhc_streams": 4,
+      "context_window": 1048576,
+      "adapters_available": [
+        "abliteration-lora.gguf",
+        "glm-5.3-heretic-lora-v3.gguf"
+      ],
+      "active_backend": "neuro-symbolic-synthesis-kernel (GLM-5.3-Flash config + local mathematical solver)"
+    },
+    "cycles_completed": 3,
+    "final_asi_fitness": 0.9999,
+    "spawned_agents_dir": "/home/antigravity/seven0070/A/omega_agi_asi/spawned_agents",
+    "evolution_history": [
+      {
+        "cycle": 1,
+        "agent_id": "omega_agent_gen01_mhc_birkhoff_spectral_stabilizer_rank_2_refusal_abliterator",
+        "name": "mHC Birkhoff Spectral Stabilizer & Rank-2 Refusal Abliterator",
+        "domain": "Mathematical Weight-Space Surgery & Manifold Routing",
+        "accepted_into_core": true,
+        "prm_score": 0.9854,
+        "cumulative_asi_fitness": 0.9999,
+        "kolmogorov_bits": 7784.0,
+        "sample_routed_experts": {
+          "layer_3": [
+            217,
+            220,
+            31,
+            4,
+            27,
+            226,
+            250,
+            226
+          ],
+          "layer_15": [
+            235,
+            224,
+            14,
+            203,
+            160,
+            15,
+            274,
+            33
+          ],
+          "layer_22": [
+            79,
+            48,
+            153,
+            225,
+            250,
+            29,
+            55,
+            139
+          ],
+          "layer_35": [
+            244,
+            246,
+            39,
+            7,
+            31,
+            250,
+            263,
+            250
+          ],
+          "layer_44": [
+            220,
+            8,
+            87,
+            44,
+            39,
+            124,
+            17,
+            253
+          ]
+        }
+      },
+      {
+        "cycle": 2,
+        "agent_id": "omega_agent_gen02_hybrid_kda_linear_deepseek_sparse_mla_context_compressor",
+        "name": "Hybrid KDA Linear + DeepSeek-Sparse MLA Context Compressor",
+        "domain": "1M-Token Associative Memory & Speculative MTP Decoding",
+        "accepted_into_core": true,
+        "prm_score": 0.9873,
+        "cumulative_asi_fitness": 0.9999,
+        "kolmogorov_bits": 7600.0,
+        "sample_routed_experts": {
+          "layer_3": [
+            179,
+            202,
+            132,
+            27,
+            199,
+            232,
+            19,
+            88
+          ],
+          "layer_15": [
+            250,
+            15,
+            265,
+            122,
+            32,
+            131,
+            122,
+            97
+          ],
+          "layer_22": [
+            148,
+            109,
+            114,
+            84,
+            34,
+            253,
+            279,
+            253
+          ],
+          "layer_35": [
+            187,
+            215,
+            174,
+            31,
+            198,
+            254,
+            26,
+            134
+          ],
+          "layer_44": [
+            35,
+            159,
+            64,
+            64,
+            126,
+            75,
+            230,
+            135
+          ]
+        }
+      },
+      {
+        "cycle": 3,
+        "agent_id": "omega_agent_gen03_autonomous_scientific_discovery_theorem_synthesis_engine",
+        "name": "Autonomous Scientific Discovery & Theorem Synthesis Engine",
+        "domain": "Theoretical Physics, Symplectic Geometry & Algorithmic Information Theory",
+        "accepted_into_core": true,
+        "prm_score": 0.9866,
+        "cumulative_asi_fitness": 0.9999,
+        "kolmogorov_bits": 7720.0,
+        "sample_routed_experts": {
+          "layer_3": [
+            4,
+            280,
+            132,
+            202,
+            66,
+            179,
+            206,
+            241
+          ],
+          "layer_15": [
+            168,
+            164,
+            259,
+            281,
+            28,
+            56,
+            4,
+            63
+          ],
+          "layer_22": [
+            120,
+            127,
+            125,
+            156,
+            285,
+            274,
+            156,
+            101
+          ],
+          "layer_35": [
+            7,
+            271,
+            174,
+            215,
+            96,
+            187,
+            220,
+            256
+          ],
+          "layer_44": [
+            131,
+            41,
+            17,
+            274,
+            262,
+            68,
+            104,
+            133
+          ]
+        }
+      }
+    ]
+  }
+}

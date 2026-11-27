@@ -821,12 +821,58 @@ print("VERIFIED_V3_BASELINE")
         report_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
         return summary
 
+    def run_full_asi_singularity_pipeline(self, cycles: int = 3) -> Dict[str, Any]:
+        """Executes the complete 4-pillar AGI/ASI Self-Evolution Pipeline:
+          1. Real `.npz` Subspace (4096x2 Q basis, 45x2 scales) & 92-Expert `keep.json` Topology Surgery
+          2. Darwin-Gödel AST Self-Rewriting & Empirical Speed/Accuracy Kernel Evolution
+          3. Autonomous 4-Tier Self-Play Scientific Curriculum & Persistent SQLite/64-D Vector Memory Vault
+          4. Multi-Agent PUCT Synthesis & Verification Loop
+        """
+        from subspace_weight_surgery import RealSubspaceWeightSurgeryEngine
+        from darwin_godel_rewriter import DarwinGodelSelfRewriter
+        from autonomous_curriculum_memory import AutonomousCurriculumEngine
+
+        # Pillar 1: Real Subspace & Expert Topology Surgery
+        surgery = RealSubspaceWeightSurgeryEngine()
+        subspace_profile = asdict(surgery.inspect_subspace())
+        schedule_opt = surgery.optimize_gaussian_layer_schedule()
+        expert_stats = surgery.compute_expert_topology_statistics()
+
+        # Pillar 2: Darwin-Gödel AST Self-Rewriting & Empirical Kernel Evolution
+        rewriter = DarwinGodelSelfRewriter()
+        rewrite_report = rewriter.run_self_rewriting_evolution()
+
+        # Pillar 3: Autonomous Self-Play Curriculum & Persistent SQLite Skill Memory
+        curriculum = AutonomousCurriculumEngine()
+        curriculum_report = curriculum.run_self_play_curriculum()
+
+        # Pillar 4: Recursive Meta-Agent Synthesis
+        agent_report = self.recursive_self_improve(cycles=cycles)
+
+        master_report = {
+            "timestamp": time.time(),
+            "pillar_1_real_subspace_and_expert_surgery": {
+                "subspace_profile": subspace_profile,
+                "optimized_kl_estimate": schedule_opt["estimated_first_token_kl"],
+                "peak_writer_layers": schedule_opt["peak_writer_layers"],
+                "expert_topology_stats": expert_stats,
+            },
+            "pillar_2_darwin_godel_ast_self_rewriting": rewrite_report,
+            "pillar_3_autonomous_curriculum_and_memory_vault": curriculum_report,
+            "pillar_4_recursive_agent_synthesis": agent_report,
+        }
+
+        master_path = self.workspace_dir / "omega_singularity_full_report.json"
+        master_path.write_text(json.dumps(master_report, indent=2), encoding="utf-8")
+        return master_report
+
 
 def main() -> None:
     import argparse
 
     parser = argparse.ArgumentParser(description="OMEGA-GLM: AGI & ASI Builder / Creator Engine")
     parser.add_argument("--cycles", type=int, default=3, help="Number of recursive self-improvement cycles")
+    parser.add_argument("--full-upgrade", action="store_true", help="Run all 4 ASI pillars (Subspace Surgery + AST Self-Rewriter + Curriculum Vault + Meta-Agent Synthesis)")
     parser.add_argument("--create-name", type=str, default="", help="Custom agent name to create")
     parser.add_argument("--create-domain", type=str, default="Universal Science & Coding", help="Custom agent domain")
     parser.add_argument("--create-objective", type=str, default="", help="Custom agent objective")
@@ -841,6 +887,32 @@ def main() -> None:
     print(f" Experts   : Top-{engine.backbone.profile.active_experts_top_k} of {engine.backbone.profile.routed_experts_pruned} Pruned / {engine.backbone.profile.routed_experts_full} Full")
     print(f" Adapters  : {', '.join(engine.backbone.profile.adapters_available) or 'None'}")
     print("=" * 78)
+
+    if args.full_upgrade:
+        master = engine.run_full_asi_singularity_pipeline(cycles=args.cycles)
+        p1 = master["pillar_1_real_subspace_and_expert_surgery"]
+        p2 = master["pillar_2_darwin_godel_ast_self_rewriting"]
+        p3 = master["pillar_3_autonomous_curriculum_and_memory_vault"]
+        print("\n[PILLAR 1] Real .npz Weight Subspace (4096x2) & 92-Expert Topology Surgery:")
+        print(f"  -> Q Basis Norms        : ||q0||={p1['subspace_profile']['q0_norm']}, ||q1||={p1['subspace_profile']['q1_norm']}, <q0,q1>={p1['subspace_profile']['q0_q1_dot_orthogonality']}")
+        print(f"  -> Peak Ablation Layers : Attn Layer {p1['subspace_profile']['peak_attn_layer']} (scale={p1['subspace_profile']['peak_attn_scale']}), MLP Layer {p1['subspace_profile']['peak_mlp_layer']} (scale={p1['subspace_profile']['peak_mlp_scale']})")
+        print(f"  -> Optimized KL Drift   : {p1['optimized_kl_estimate']} | Unique Pruned Experts: {p1['expert_topology_stats']['unique_expert_indices_used']}/288")
+
+        print("\n[PILLAR 2] Darwin-Gödel AST Self-Rewriting & Empirical Kernel Evolution:")
+        for m in p2["results"]:
+            print(f"  -> Kernel '{m['kernel_name']}': {m['baseline_algorithm']} => {m['mutated_algorithm']}")
+            print(f"     Error Improved: {m['error_improvement_factor']}x | Speedup: {m['speedup_factor']}x | Committed: {m['accepted_and_committed']}")
+
+        print("\n[PILLAR 3] Autonomous Self-Play Curriculum & Persistent SQLite Skill Memory Vault:")
+        print(f"  -> Verified Skills Stored: {p3['total_verified_skills_in_vault']} (DB: {p3['vault_db_path']})")
+        for c in p3["curriculum_results"]:
+            print(f"  -> [Tier {c['tier']}] {c['title']}: {c['verification_output']}")
+
+        print("\n[PILLAR 4] Recursive Meta-Agent Synthesis:")
+        for step in master["pillar_4_recursive_agent_synthesis"]["evolution_history"]:
+            print(f"  -> [Cycle {step['cycle']}] {step['name']} | PRM={step['prm_score']} | Fitness={step['cumulative_asi_fitness']}")
+        print("=" * 78)
+        return
 
     if args.create_name and args.create_objective:
         spec = engine.create_specialized_agent(

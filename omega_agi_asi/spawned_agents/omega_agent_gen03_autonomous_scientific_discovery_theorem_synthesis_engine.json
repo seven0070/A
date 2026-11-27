@@ -108,7 +108,7 @@
       ]
     }
   },
-  "created_at": 1795774440.067332,
+  "created_at": 1795775093.948341,
   "puct_search_summary": {
     "winning_branch": "branch_1",
     "winning_q_value": 1.212,
@@ -206,6 +206,6 @@
         ]
       }
     },
-    "latency_s": 0.0015
+    "latency_s": 0.0012
   }
 }

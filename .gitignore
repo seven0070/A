@@ -1,0 +1,8 @@
+# Ignore large binary weight shards over GitHub's 100MB limit while keeping adapters, configs, and scripts tracked
+*.safetensors
+*.gguf
+!adapters/*.gguf
+!GLM-5.3-Flash-Uncensored/adapters/*.gguf
+__pycache__/
+*.pyc
+.env

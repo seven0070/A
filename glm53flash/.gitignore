@@ -1,0 +1,7 @@
+# 117–341 GB of weights and build output must never enter git
+weights/
+.venv/
+llama.cpp/
+glm.env
+__pycache__/
+*.pyc

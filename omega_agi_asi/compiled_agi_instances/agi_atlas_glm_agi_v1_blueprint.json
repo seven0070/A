@@ -1,0 +1,90 @@
+{
+  "agi_id": "agi_atlas_glm_agi_v1",
+  "name": "Atlas-GLM-AGI-v1",
+  "specialization_profile": "Universal General Intelligence (Science, Causal Reasoning, Zero-Shot Abstraction & Code)",
+  "backbone_model": "GLM-5.3-Flash-Uncensored",
+  "faculties_enabled": [
+    "1_Perception_&_4096D_Rank2_Subspace_Surgery",
+    "2_Global_Workspace_Theory_mHC_Broadcast",
+    "3_TriPartite_Episodic_KDA_Semantic_Procedural_Memory",
+    "4_Pearl_Causal_Do_Calculus_&_Counterfactual_Engine",
+    "5_ARC_AGI_Zero_Shot_Analogical_Program_Induction",
+    "6_Active_Inference_Intrinsic_Motivation",
+    "7_System2_PUCT_&_GLM53_Deliberative_Synthesizer",
+    "8_Metacognitive_Brier_Calibration_Monitor"
+  ],
+  "compiled_module_path": "/home/antigravity/seven0070/A/omega_agi_asi/compiled_agi_instances/agi_atlas_glm_agi_v1.py",
+  "cognitive_evaluation": {
+    "agi_instance": "Atlas-GLM-AGI-v1",
+    "task_prompt": "Unify causal do-calculus counterfactuals with symplectic conservation laws and zero-shot program synthesis.",
+    "faculty_1_perception_and_subspace_cleanup": {
+      "routed_experts_layer_3": [
+        118,
+        86,
+        111,
+        168,
+        45,
+        189,
+        110,
+        39
+      ],
+      "post_surgery_refusal_leakage": 0.06766877
+    },
+    "faculty_2_global_workspace_broadcast": {
+      "step": 1,
+      "winning_faculty": "AnalogicalAbstraction",
+      "broadcast_thought": "Induced program 'running_prefix_sum' -> [4, 3, 8, 10, 20]",
+      "ignition_score": 1.05,
+      "competing_coalitions": 3
+    },
+    "faculty_3_tripartite_memory": {
+      "episode": {
+        "episode_id": 1,
+        "stimulus": "Unify causal do-calculus counterfactuals with symplectic conservation laws and zero-shot program syn",
+        "reward": 0.96,
+        "semantic_fast_weight_error": 0.127634,
+        "procedural_skills_available": 4
+      },
+      "retrieved_procedural_skills": [
+        "Relativistic Lorentz & Noether Angular Momentum Invariant Solver",
+        "Amari Fisher Information Natural Gradient & Variational Free-Energy Minimizer"
+      ]
+    },
+    "faculty_4_causal_do_calculus": {
+      "abduced_structural_residual": 0.9,
+      "counterfactual_Y": 5.4,
+      "interventional_E_Y_do_X": 4.5,
+      "observational_E_Y_given_X": 6.926966,
+      "confounding_bias_eliminated": 2.426966
+    },
+    "faculty_5_analogical_program_induction": {
+      "induced_program_rule": "running_prefix_sum",
+      "generalization_verified_on_demos": true,
+      "zero_shot_target_input": [
+        4,
+        -1,
+        5,
+        2,
+        10
+      ],
+      "zero_shot_transferred_output": [
+        4,
+        3,
+        8,
+        10,
+        20
+      ]
+    },
+    "faculty_6_and_7_glm_deliberation": {
+      "backend": "neuro-symbolic-synthesis-kernel (GLM-5.3-Flash config + local mathematical solver)",
+      "synthesized_response": "### Universal Scientific & Algorithmic Synthesis\nProcessed objective: `Unify causal do-calculus counterfactuals with symplectic conservation laws and zero-shot program synthesis.` across hybrid KDA linear-attention recurrence $S_t = \\alpha_t S_{t-1} + k_t v_t^\\top$ and DeepSeek-Sparse MLA attention."
+    },
+    "faculty_8_metacognitive_calibration": {
+      "total_judgments": 1,
+      "brier_error": 0.0016,
+      "metacognitive_calibration": 0.9984
+    }
+  },
+  "all_faculties_verified": true,
+  "timestamp": 1795776258.0782177
+}

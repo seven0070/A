@@ -114,6 +114,17 @@ class OmegaASIHandler(BaseHTTPRequestHandler):
             self._send_json(200, report)
             return
 
+        if self.path == "/v1/agi/build":
+            from agi_builder import UniversalAGIBuilder
+            builder = UniversalAGIBuilder()
+            bp = builder.build_agi(
+                name=body.get("name", "Atlas-GLM-AGI-v1"),
+                specialization_profile=body.get("profile", "Universal General Intelligence"),
+                test_prompt=body.get("prompt", "Unify causal do-calculus counterfactuals with symplectic conservation laws."),
+            )
+            self._send_json(200, asdict(bp))
+            return
+
         self._send_json(404, {"error": f"Unknown POST endpoint {self.path}"})
 
 

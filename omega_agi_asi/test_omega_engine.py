@@ -99,6 +99,17 @@ class TestOmegaAGIASIEngine(unittest.TestCase):
         self.assertTrue(report["all_subsystems_verified"])
         self.assertEqual(report["subsystems_count"], 5)
 
+    def test_universal_agi_builder_8_cognitive_faculties(self):
+        from agi_builder import UniversalAGIBuilder
+        builder = UniversalAGIBuilder()
+        bp = builder.build_agi(name="Atlas-GLM-AGI-v1")
+        self.assertTrue(bp.all_faculties_verified)
+        self.assertEqual(len(bp.faculties_enabled), 8)
+        self.assertEqual(
+            bp.cognitive_evaluation["faculty_5_analogical_program_induction"]["zero_shot_transferred_output"],
+            [4, 3, 8, 10, 20],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
